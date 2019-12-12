@@ -52,7 +52,7 @@ $("#search-button").on("click",function() {
             //adding tags to section
             section.append(wordTag, definitionTag, exampleTag)
             // empty div content (previous search results) before adding new content
-            $("#ud-definition").empty();
-            $("#ud-definition").append(section);
+            $("#ud-area").empty();
+            $("#ud-area").append(section);
     })
 });
