@@ -8,45 +8,39 @@ $("#search-button").on("click",function() {
         url:queryURL,
         method: "GET"
     }).then(function(response){
+        console.log(response)
             let section = $("<div>");
             // defining the tags for each section
-            let wordTag = $("<h3>").attr("id", "word")
-            let definitionTag = $("<h5>").attr("id", "definition")
-            let exampleTag = $("<h6>").attr("id", "example")
+            let wordTag = $("<h3>").attr("class", "word")
+            let definitionTag = $("<h5>").attr("class", "definition")
+            let exampleTag = $("<h6>").attr("class", "example")
             
 
             // variables for tag text
-            let wordRaw = response[0].word;
-            let definitionRaw = response[0].definition;
-            let exampleRaw = response[0].example;
+            let wordRaw = response.list[0].word;
+            console.log(wordRaw)
+            let definitionRaw = response.list[0].definition;
+            let exampleRaw = response.list[0].example;
            
             //remove invalid characters from each string
+            let word = wordRaw.replace("[","")
+            let definition = definitionRaw.replace("[","")
+            let example = exampleRaw.replace("[","")
 
-            let wordArray = wordRaw.split()
-            for (let i = wordArray.length-1; i > -1; i--){
-                if (wordArray[i] == "[" || wordArray[i] == "]"){
-                    wordArray.splice(i)
-                }
-            }
-            let word = wordArray.toString()
-
-            let definitionArray = definitionRaw.split()
-            for (let i = definitionArray.length-1; i > -1; i--){
-                if (definitionArray[i] == "[" || definitionArray[i] == "]"){
-                    definitionArray.splice(i)
-                }
+            for (let i = 0; i<wordRaw.length; i++){
+                word = word.replace("]","")
+                word = word.replace("[","")
             }
 
-            definition = definitionArray.toString()
-
-            let exampleArray = exampleRaw.split()
-            for (let i = exampleArray.length-1; i > -1; i--){
-                if (exampleArray[i] == "[" || exampleArray[i] == "]"){
-                    exampleArray.splice(i)
-                }
+            for (let i = 0; i<definitionRaw.length; i++){
+                definition = definition.replace("]", "")
+                definition = definition.replace("[", "")
             }
-
-            let example = exampleArray.toString()
+            
+            for (let i = 0; i<exampleRaw.length;i++){
+                example = example.replace("]", "")
+                example = example.replace("[", "")
+            }
 
 
 
