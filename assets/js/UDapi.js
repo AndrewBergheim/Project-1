@@ -1,7 +1,7 @@
 
-$("#search-word").on("click",function() {
+$("#search-button").on("click",function() {
     //get search term
-    let searchTerm = $("#").val()
+    let searchTerm = $("#searched-word").val();
     let queryURL = "http://api.urbandictionary.com/v0/define?term=" + searchTerm;
 
     $.ajax({
@@ -58,7 +58,7 @@ $("#search-word").on("click",function() {
             //adding tags to section
             section.append(wordTag, definitionTag, exampleTag)
             // empty div content (previous search results) before adding new content
-            $("#ud-content").empty();
-            $("#ud-content").append(section);
+            $("#ud-definition").empty();
+            $("#ud-definition").append(section);
     })
 });
