@@ -8,6 +8,8 @@ $.ajax({
 .then(function (response) {
     console.log(response[0].shortdef);
     let def = response[0].shortdef;
-    $("#mw-area").text(def);
+    let headWord = $("<h3>").text(selectedText);
+    let wordBody = $("<h3>").text(def);
+    $("#mw-area").append(headWord,wordBody);
 });
 });
