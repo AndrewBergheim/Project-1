@@ -2,7 +2,11 @@
 function search(){
     //get search term
     let searchTerm;
-    searchTerm = $("#searched-word").val()
+    if($(this).hasClass(".clickword")){
+        searchTerm = $(this).text()
+    }else{
+        searchTerm = $("#searched-word").val()
+    }
     let queryURL = "http://api.urbandictionary.com/v0/define?term=" + searchTerm;
 
     $.ajax({
