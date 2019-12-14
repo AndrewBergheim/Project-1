@@ -14,12 +14,12 @@ body {
     padding: 0 5rem;
 }
 
-.mw-definition, .ud-definition{
+#mw-definition, #ud-definition{
     border-bottom: 1px solid rgb(196, 196, 196);
     padding-bottom: 10px;
 }
 
-.mw-example, .ud-example{
+#mw-example, #ud-example{
     padding-top: 10px;
 }
 
