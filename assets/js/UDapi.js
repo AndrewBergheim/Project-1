@@ -2,7 +2,7 @@
 function search(){
     //get search term
     let searchTerm;
-    if($(this).hasClass(".clickword")){
+    if($(this).hasClass("clickword")){
         searchTerm = $(this).text()
     }else{
         searchTerm = $("#searched-word").val()
