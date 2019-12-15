@@ -11,9 +11,9 @@ $("#search-button").on("click",function() {
         console.log(response)
             let section = $("<div>");
             // defining the tags for each section
-            let wordTag = $("<h3>").attr("class", "word")
-            let definitionTag = $("<h5>").attr("class", "definition")
-            let exampleTag = $("<h6>").attr("class", "example")
+            let wordTag = $("<h3>").attr("class", "word").attr("hidden", true)//hidden changes made
+            let definitionTag = $("<h5>").attr("class", "definition").attr("hidden", true)
+            let exampleTag = $("<h6>").attr("class", "example").attr("hidden", true)
             
 
             // variables for tag text
@@ -54,5 +54,9 @@ $("#search-button").on("click",function() {
             // empty div content (previous search results) before adding new content
             $("#ud-area").empty();
             $("#ud-area").append(section);
+
+            wordTag.fadeIn(600);//made changes here
+            definitionTag.fadeIn(2000);
+            exampleTag.fadeIn(2400);            
     })
 });
