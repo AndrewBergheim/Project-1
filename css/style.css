@@ -2,12 +2,21 @@ body {
     background: #f6f6f6;
     height: 100vh;
     padding: 0 2rem;
-    background: -webkit-linear-gradient(left, rgba(9, 38, 66, 0.95), rgba(15, 53, 92, 0.95));
+    /* background: -webkit-linear-gradient(left, rgba(9, 38, 66, 0.95), rgba(15, 53, 92, 0.95)); */
+    background: #222;
 }
 
 #logo{
     font-size: 100px;
-    color: rgba(17, 108, 194, 0.95);
+    /* color: rgba(17, 108, 194, 0.95); */
+    color: rgba(41, 137, 226, 0.95);
+}
+
+#dictionary-button:hover{
+    background: rgba(41, 137, 226, 0.95);
+    color: #f6f6f6;
+    border: none;
+
 }
 
 #index-main{
