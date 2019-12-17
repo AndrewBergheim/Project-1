@@ -8,55 +8,21 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/bulma.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Double meanings</title>
+    <title>Dictionary</title>
 </head>
 <body>
-    <div class="container">
-        <section id="main-header" class="hero is-dark">
-            <div class="hero-body">
-                <div class="container">
-                    <h1 id="main-title" class="title has-text-centered">
-                        DoubleMeaning Dictionary <i class="fas fa-smile-wink"></i>
-                    </h1>
-                </div>
-            </div>
-        </section>
-        <div id="input-area" class="field is-grouped">
-            <div class="control is-expanded">
-                <input id="searched-word" class="input" type="text" placeholder="Search">
-            </div>
-            <div class="control">
-                <a id="search-button" class="button is-info">Search</a>
+    <section id="index-main" class="hero">
+        <div class="hero-body is-medium">
+            <div id="test" class="container has-text-centered">
+                <i id="logo" class="fas fa-book"></i>
+                <h1 class="title is-1 white-text">Title</h1>
+                <h2 class="subtitle is-4 white-text">Magical search directory. Light years ahead of its time
+                    <br>
+                    <span class="is-size-6 white-text">inspired by Andrew, Jake, Kristena, and Alex</span>
+                </h2>
+                <a href="search.html" id="dictionary-button" class="button">Go to Dictionary</a>
             </div>
         </div>
-        <article class="message">
-            <div class="message-header">
-                <p>Merium-Webster Definition</p>
-            </div>
-            <div id="mw-area" class="message-body">
-                <div class="mw-definition"></div>
-                <div class="mw-example"></div>
-            </div>
-        </article>
-        <article class="message">
-            <div class="message-header">
-                <p>Urban Dictionary Definition <i class="fas fa-grin-tongue-wink"></i> <i class="fas fa-grin-tongue-wink"></i></p>
-            </div>
-            <div id="ud-area" class="message-body">
-                <div class="ud-definition"></div>
-                <div class="ud-example"></div>
-            </div>
-        </article>
-        <article class="message">
-                <div class="message-header">
-                    <p>Related Words </p>
-                </div>
-                <div id="AssocWords" class="message-body">
-                    
-                </div>
-            </article>
-    </div>
-    
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="assets/js/UDapi.js"></script>
     <script src="assets/js/normalLookup.js"></script>
