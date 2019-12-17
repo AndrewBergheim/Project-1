@@ -59,7 +59,7 @@ function search(){
             $("#ud-area").empty();
             $("#ud-area").append(wordTag);
             $("#ud-area").append(definitionTag);
-            $("#ud-area").append(exampleTag);
+            //$("#ud-area").append(exampleTag);
             
             
 
@@ -70,6 +70,6 @@ $("#search-button").on("click",function() {
     search()
 });
 
-$(".clickword").on("click",function() {
+/*$(".clickword").on("click",function() {
     search()
-});
+});*/
