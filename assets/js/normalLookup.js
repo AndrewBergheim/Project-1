@@ -6,10 +6,14 @@ $.ajax({
   method: "GET",
 })
 .then(function (response) {
-    console.log(response[0].shortdef);
-    let def = response[0].shortdef;
-    let headWord = $("<h3>").text(selectedText);
-    let wordBody = $("<h3>").text(def);
-    $("#mw-area").append(headWord,wordBody);
+
+  $("#mw-area").empty();
+  console.log(response);
+  let def = response[0].shortdef;    
+  let headWord = $("<h3>").text(selectedText).attr("hidden", true);//selected elements must be hidden
+  let wordBody = $("<h3>").text(def).attr("hidden", true);
+  $("#mw-area").append(headWord,wordBody);//selected elements then are appended
+  headWord.fadeIn(600);//this function reveals the element at an invisible opacity and then adjusts the opacity of the element over the parameter of given time to be visible
+  wordBody.fadeIn(2000);
 });
 });

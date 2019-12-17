@@ -19,6 +19,7 @@ function search(){
             let wordTag = $("<h3>").attr("id", "ud-word")
             let definitionTag = $("<div>").attr("id", "ud-definition")
             let exampleTag = $("<div>").attr("id", "ud-example")
+
             
 
             // variables for tag text
@@ -56,12 +57,17 @@ function search(){
             //adding tags to section
             //section.append(wordTag, definitionTag, exampleTag)
             // empty div content (previous search results) before adding new content
+            wordTag.attr("hidden", true);
+            definitionTag.attr("hidden", true);
+            exampleTag.attr("hidden", true);
+
             $("#ud-area").empty();
             $("#ud-area").append(wordTag);
             $("#ud-area").append(definitionTag);
-            //$("#ud-area").append(exampleTag);
-            
-            
+            $("#ud-area").append(exampleTag);         
+            wordTag.fadeIn(600);
+            definitionTag.fadeIn(2000);
+            exampleTag.fadeIn(2400);
 
     })
 };
