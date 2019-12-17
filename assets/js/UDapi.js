@@ -1,7 +1,12 @@
 
-$("#search-button").on("click",function() {
+function search(){
     //get search term
-    let searchTerm = $("#searched-word").val();
+    let searchTerm;
+    if($(this).hasClass("clickword")){
+        searchTerm = $(this).text()
+    }else{
+        searchTerm = $("#searched-word").val()
+    }
     let queryURL = "http://api.urbandictionary.com/v0/define?term=" + searchTerm;
 
     $.ajax({
@@ -9,11 +14,11 @@ $("#search-button").on("click",function() {
         method: "GET"
     }).then(function(response){
         console.log(response)
-            let section = $("<div>");
+            //let section = $("<div>");
             // defining the tags for each section
             let wordTag = $("<h3>").attr("id", "ud-word")
             let definitionTag = $("<div>").attr("id", "ud-definition")
-            let exampleTag = $("<h6>").attr("id", "ud-example")
+            let exampleTag = $("<div>").attr("id", "ud-example")
             
 
             // variables for tag text
@@ -21,7 +26,7 @@ $("#search-button").on("click",function() {
             console.log(wordRaw)
             let definitionRaw = response.list[0].definition;
             let exampleRaw = response.list[0].example;
-           
+        
             //remove invalid characters from each string
             let word = wordRaw.replace("[","")
             let definition = definitionRaw.replace("[","")
@@ -54,9 +59,17 @@ $("#search-button").on("click",function() {
             $("#ud-area").empty();
             $("#ud-area").append(wordTag);
             $("#ud-area").append(definitionTag);
-            $("#ud-area").append(exampleTag);
+            //$("#ud-area").append(exampleTag);
             
             
 
     })
+};
+
+$("#search-button").on("click",function() {
+    search()
 });
+
+/*$(".clickword").on("click",function() {
+    search()
+});*/
