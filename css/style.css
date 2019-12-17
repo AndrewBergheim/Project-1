@@ -3,7 +3,7 @@ body {
     height: 100vh;
     padding: 0 2rem;
     /* background: -webkit-linear-gradient(left, rgba(9, 38, 66, 0.95), rgba(15, 53, 92, 0.95)); */
-    background: #222;
+    background: #333;
 }
 
 #logo{
