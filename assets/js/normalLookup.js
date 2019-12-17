@@ -6,6 +6,7 @@ $.ajax({
   method: "GET",
 })
 .then(function (response) {
+
   $("#mw-area").empty();
   console.log(response);
   let def = response[0].shortdef;    
