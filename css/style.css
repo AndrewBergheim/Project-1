@@ -6,17 +6,22 @@ body {
     background: #333;
 }
 
-#logo{
+#nav{
+    background: rgb(43, 42, 42);
+    /* background: rgba(9, 38, 66, 0.95); */
+    color: rgba(41, 137, 226);
+}
+
+#main-logo{
     font-size: 100px;
     /* color: rgba(17, 108, 194, 0.95); */
-    color: rgba(41, 137, 226, 0.95);
+    color: rgba(41, 137, 226);
 }
 
 #dictionary-button:hover{
     background: rgba(41, 137, 226, 0.95);
     color: #f6f6f6;
     border: none;
-
 }
 
 #index-main{
@@ -25,6 +30,11 @@ body {
     height: 100%;
     min-width: 100%;
 }
+
+.container{
+    margin-top: 32px;
+}
+
 .white-text{
     color: #f6f6f6;
 }
