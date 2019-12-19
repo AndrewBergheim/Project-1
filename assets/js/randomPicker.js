@@ -1,4 +1,3 @@
-$(".control").on("click", 
 function DataLookUp () {
 $.ajax({
     url: "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY",
@@ -15,4 +14,4 @@ $.ajax({
   $("#imageDiv").fadeIn(2000);
   $("#text").fadeIn(2000);
 });
-});
+};

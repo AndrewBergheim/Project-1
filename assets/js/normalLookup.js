@@ -1,4 +1,3 @@
-$("#search-button").on("click", 
 function normalLookUp () {
   let selectedText= $("#searched-word").val();
 $.ajax({
