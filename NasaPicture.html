@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Double meanings</title>
 </head>
-<body style="background-color: black">
+<body style="background-color: black" onload="DataLookUp()">
     <nav id="nav" class="navbar is-fixed-top">
         <div class="navbar-brand">
             <a href="index.html" class="navbar-item white-text"><i id="nav-logo" class="fas fa-book"></i></a>
@@ -34,11 +34,6 @@
 
     <div class="columns">
         <div class="column is-one-third">            
-            <div id="input-area" class="field is-centered">
-                <div class="control">
-                    <a id="search-button" class="button is-info">Retrieve Image and Fact of the Day from NASA</a>
-                </div>
-            </div>
             <div class="content">
                 <p class= "has-text-white" id="text" hidden="true"></p>
             </div>
