@@ -10,8 +10,8 @@ $.ajax({
   $("#mw-area").empty();
   console.log(response);
   let def = response[0].shortdef;    
-  let headWord = $("<h3>").text(selectedText).attr("hidden", true);//selected elements must be hidden
-  let wordBody = $("<h3>").text(def).attr("hidden", true);
+  let headWord = $("<h3>").text(selectedText).attr("hidden", true).attr("id", "headWord");//selected elements must be hidden
+  let wordBody = $("<h3>").text(def).attr("hidden", true).attr("id", "wordBody");
   $("#mw-area").append(headWord,wordBody);//selected elements then are appended
   headWord.fadeIn(600);//this function reveals the element at an invisible opacity and then adjusts the opacity of the element over the parameter of given time to be visible
   wordBody.fadeIn(2000);
