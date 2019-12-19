@@ -1,4 +1,5 @@
 
+
 function search(){
     //get search term
     let searchTerm;
@@ -19,7 +20,6 @@ function search(){
             let wordTag = $("<h3>").attr("id", "ud-word")
             let definitionTag = $("<div>").attr("id", "ud-definition")
             let exampleTag = $("<div>").attr("id", "ud-example")
-
             
 
             // variables for tag text
@@ -27,7 +27,7 @@ function search(){
             console.log(wordRaw)
             let definitionRaw = response.list[0].definition;
             let exampleRaw = response.list[0].example;
-        
+
             //remove invalid characters from each string
             let word = wordRaw.replace("[","")
             let definition = definitionRaw.replace("[","")
@@ -76,6 +76,7 @@ $("#search-button").on("click",function() {
     search()
 });
 
-/*$(".clickword").on("click",function() {
+$(".clickword").on("click",function() {
     search()
-});*/
+});
+
