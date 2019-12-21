@@ -1,5 +1,5 @@
 $(".control").on("click", function () {
-    console.log('test')
+    console.log('test');
         let search = $("#searched-word").val();
         $.ajax({
             "async": true,
