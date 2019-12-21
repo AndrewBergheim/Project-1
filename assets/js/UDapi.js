@@ -3,7 +3,7 @@
 function search(){
     //get search term
     let searchTerm;
-    if($(this).hasClass("clickword")){
+    if($(this).attr("class","clickword") === true){
         searchTerm = $(this).text()
     }else{
         searchTerm = $("#searched-word").val()
@@ -76,7 +76,7 @@ $("#search-button").on("click",function() {
     search()
 });
 
-$(".clickword").on("click",function() {
+$(".control").on("click",function() {
     search()
 });
 

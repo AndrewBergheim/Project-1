@@ -1,9 +1,15 @@
-$(".control").on("click",
-function normalLookUp () {
-  let selectedText= $("#searched-word").val();
+$(".control").on("click",function normalLookUp () {
+
+let selectedText;
+if($(this).hasClass("clickword")){
+  selectedText = $(this).text()
+}else{
+  selectedText = $("#searched-word").val()
+}
+
 $.ajax({
     url: "https://dictionaryapi.com/api/v3/references/collegiate/json/"+selectedText+"?key=e310d331-6efb-4157-b036-443ba5a74da1",
-  method: "GET",
+    method: "GET",
 })
 .then(function (response) {
 

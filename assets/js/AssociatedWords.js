@@ -1,30 +1,29 @@
-$("#search-button").on("click",function() {
-        var search = $("#searched-word").val()
-        var settings = {
-        "async": true,
-        "crossDomain": true,
-        "url": "https://api.datamuse.com/words?rel_trg=" + search,
-        "method": "GET",
-        
-        }
-    
-        $.ajax(settings).then(function (response) {
-            $("#AssocWords").empty()
-            var text1 = $("<p>")
+$(".control").on("click", function () {
+    console.log('test')
+        let search = $("#searched-word").val();
+        $.ajax({
+            "async": true,
+            "crossDomain": true,
+            "url": "https://api.datamuse.com/words?rel_trg=" + search,
+            "method": "GET",
+        }).then(function (response) {
+            $("#related-words").empty()
+            let text1 = $("<p>")
             
             text1.text("Related Words: " )
             text1.css("font-weight","Bold");
             
             for (i=0;i<10;i++) {
                 
-                var here = $("<button>")
+                let here = $("<button>")
                 here.text(response[i].word)
                 
-                here.attr("class","clickword")
-                text1.append(here) 
+                here.attr("class","control")
+                here.attr("clickword", true);
+                text1.append(here); 
                 
                 
             }
-            $("#AssocWords").append(text1)
+            $("#related-words").append(text1)
         });
     })
