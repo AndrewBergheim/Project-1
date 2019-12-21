@@ -76,7 +76,7 @@ $("#search-button").on("click",function() {
     search()
 });
 
-// $(".control").on("click",function() {
-//     search()
-// });
+$(".control").on("click",function() {
+    search()
+});
 

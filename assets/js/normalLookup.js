@@ -1,4 +1,4 @@
-$("#search-button").on("click",function normalLookUp () {
+$(".control").on("click",function normalLookUp () {
 
   selectedText = $("#searched-word").val()
   console.log("click");
