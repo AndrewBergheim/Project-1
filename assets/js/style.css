@@ -1,0 +1,44 @@
+body {
+    background: #f6f6f6;
+    height: 100vh;
+    padding: 0 2rem;
+}
+#AssocWords {
+    width: 100%;
+    float:left;
+    position: relative;
+    text-align: center;
+}
+
+#main-header {
+    border-radius: 10px;
+    margin-bottom: .8rem;
+}
+.clickword {
+    display: inline-block;
+    height: 30px;
+    background-color: white;
+    
+    font-weight: bold;
+
+}
+#input-area{
+    padding: 0 5rem;
+}
+
+#ud-definition, #mw-definition{
+    border-left: 1px solid #999;
+    border-bottom: 1px solid #999;
+    border-right: 1px solid #999;
+    background: white;
+}
+
+/* .message{
+    display: none;
+} */
+
+@media (max-width: 700px){
+    #input-area{
+        padding: 0;
+    }
+}

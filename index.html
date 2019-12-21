@@ -8,14 +8,24 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/bulma.css">
     <link rel="stylesheet" href="css/style.css">
+
     <title>Dictionary</title>
 </head>
 <body>
+    <nav id="nav" class="navbar is-fixed-top">
+        <div class="navbar-brand">
+            <a href="index.html" class="navbar-item white-text"><i id="nav-logo" class="fas fa-book"></i></a>
+            <a href="index.html" class="navbar-item white-text">Home</a>
+            <a href="search.html" class="navbar-item white-text">Dictionary</a>
+            <a href="NasaPicture.html" class="navbar-item white-text">NASA Fact of Day</a>
+            <a href="APIList.html" class="navbar-item white-text">APIs</a>
+        </div>
+    </nav>
     <section id="index-main" class="hero">
         <div class="hero-body is-medium">
-            <div id="test" class="container has-text-centered">
-                <i id="logo" class="fas fa-book"></i>
-                <h1 class="title is-1 white-text">Title</h1>
+            <div class="container has-text-centered">
+                <i id="main-logo" class="fas fa-book"></i>
+                <h1 class="title is-1 white-text">DoubleMeaning Dictionary</h1>
                 <h2 class="subtitle is-4 white-text">Magical search directory. Light years ahead of its time
                     <br>
                     <span class="is-size-6 white-text">inspired by Andrew, Jake, Kristena, and Alex</span>
@@ -23,8 +33,7 @@
                 <a href="search.html" id="dictionary-button" class="button">Go to Dictionary</a>
             </div>
         </div>
+    </section>
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-    <script src="assets/js/UDapi.js"></script>
-    <script src="assets/js/normalLookup.js"></script>
 </body>
 </html>

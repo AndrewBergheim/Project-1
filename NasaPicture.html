@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Double meanings</title>
 </head>
-<body>
+<body style="background-color: black" onload="DataLookUp()">
     <nav id="nav" class="navbar is-fixed-top">
         <div class="navbar-brand">
             <a href="index.html" class="navbar-item white-text"><i id="nav-logo" class="fas fa-book"></i></a>
@@ -20,56 +20,36 @@
             <a href="APIList.html" class="navbar-item white-text">APIs</a>
         </div>
     </nav>
-    <div class="container">
+    <div class="container" >
         <section id="search-main-header" class="hero is-dark">
             <div class="hero-body">
                 <div class="container">
                     <h1 id="search-main-title" class="title has-text-centered">
-                        DoubleMeaning Dictionary <i class="fas fa-smile-wink"></i>
+                        Space Picture of the Day <i class="fas fa-smile-wink"></i>
                     </h1>
                 </div>
             </div>
         </section>
-        <div id="input-area" class="field is-grouped">
-            <div class="control is-expanded">
-                <input id="searched-word" class="input" type="text" placeholder="Search">
+
+    <div class="columns">
+        <div class="column is-one-third">            
+            <div class="content">
+                <p class= "has-text-white" id="text" hidden="true">                    
+
+                </p>
             </div>
-            <div class="control">
-                <a id="search-button" class="button is-info">Search</a>
+
+        </div>
+        <div class="column is-three-quarters">
+            <div id= "imageDiv" hidden= "true">
+                <figure class="image is-500x500" id="image">
+                </figure>
             </div>
         </div>
-        <article class="message">
-            <div class="message-header">
-                <p>Related Words</p>
-            </div>
-            <div id="related-words-area" class="message-body">
-                <div id="related-words"></div>
-            </div>
-        </article>
-        <article class="message">
-            <div class="message-header">
-                <p>Merriam-Webster Definition</p>
-            </div>
-            <div id="mw-area" class="message-body">
-                <div id="mw-definition"></div>
-                <div id="mw-example"></div>
-            </div>
-        </article>
-        <article class="message">
-            <div class="message-header">
-                <p>Urban Dictionary Definition</p>
-            </div>
-            <div id="ud-area" class="message-body">
-                <div id="ud-definition"></div>
-                <div id="ud-example"></div>
-            </div>
-        </article>
-
     </div>
+</div>
     
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-    <script src="assets/js/UDapi.js"></script>
-    <script src="assets/js/normalLookup.js"></script>
-    <script src="assets/js/AssociatedWords.js"></script>
+    <script src="assets/js/randomPicker.js"></script>
 </body>
 </html>
