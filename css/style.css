@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Courier+Prime&display=swap');
 body {
     background: #f6f6f6;
     height: 100vh;
@@ -8,6 +9,7 @@ body {
 #nav{
     background: rgb(43, 42, 42);
     color: rgba(41, 137, 226);
+    font-family: "Courier Prime", sans-serif;
 }
 
 #main-logo{
@@ -88,6 +90,9 @@ body {
     }
     .hero-body{
         padding: .5rem;
+    }
+    #nav{
+        font-size: 11px;
     }
     #main-header {
         font-size: 2.3rem;
