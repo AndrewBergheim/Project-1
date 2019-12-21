@@ -8,10 +8,9 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/bulma.css">
     <link rel="stylesheet" href="css/style.css">
-
-    <title>Dictionary</title>
+    <title>Double meanings</title>
 </head>
-<body>
+<body style="background-color: black" onload="DataLookUp()">
     <nav id="nav" class="navbar is-fixed-top">
         <div class="navbar-brand">
             <a href="index.html" class="navbar-item white-text"><i id="nav-logo" class="fas fa-book"></i></a>
@@ -21,19 +20,36 @@
             <a href="APIList.html" class="navbar-item white-text">APIs</a>
         </div>
     </nav>
-    <section id="index-main" class="hero">
-        <div class="hero-body is-medium">
-            <div class="container has-text-centered">
-                <i id="main-logo" class="fas fa-book"></i>
-                <h1 id="main-header" class="title is-1 white-text">DoubleMeaning Dictionary</h1>
-                <h2 id="main-subheader" class="subtitle is-4 white-text">Magical search directory. Light years ahead of its time
-                    <br>
-                    <span class="is-size-6 white-text">inspired by Andrew, Jake, Kristena, and Alex</span>
-                </h2>
-                <a href="search.html" id="dictionary-button" class="button">Go to Dictionary</a>
+    <div class="container" >
+        <section id="search-main-header" class="hero is-dark">
+            <div class="hero-body">
+                <div class="container">
+                    <h1 id="search-main-title" class="title has-text-centered">
+                        Space Picture of the Day <i class="fas fa-user-astronaut"></i>
+                    </h1>
+                </div>
+            </div>
+        </section>
+
+    <div class="columns">
+        <div class="column is-one-third">            
+            <div class="content">
+                <p class= "has-text-white" id="text" hidden="true">                    
+
+                </p>
+            </div>
+
+        </div>
+        <div class="column is-three-quarters">
+            <div id= "imageDiv" hidden= "true">
+                <figure class="image is-500x500" id="image">
+                </figure>
             </div>
         </div>
-    </section>
+    </div>
+</div>
+    
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="assets/js/randomPicker.js"></script>
 </body>
 </html>
